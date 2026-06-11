@@ -59,3 +59,13 @@ Returns the Marine Health brand code and style guidance.
 `get_content_context`
 
 Builds a source-backed context pack for article, social post, or video brief generation.
+
+## Source Layout
+
+MCP tools read from:
+
+- `export/knowledge/*.md`
+- `export/assets`
+- `export/transcripts`
+- `data/entities`
+- `data/indices`

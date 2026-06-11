@@ -16,17 +16,17 @@ import { normalizeText, stripMarkdown, summarize, toSlug, uniqueStrings } from "
 export async function loadKnowledgeBase(root?: string): Promise<KnowledgeBase> {
   const paths = getKnowledgePaths(root);
   const generatedAt = new Date().toISOString();
-  const assets = await listAssets(paths.rawAssets, paths.root);
+  const assets = await listAssets(paths.exportAssets, paths.root);
 
-  const productCatalogPath = path.join(paths.rawProducts, "products-full.md");
+  const productCatalogPath = path.join(paths.exportKnowledge, "01-products.md");
   const productCatalogMarkdown = await readOptionalText(productCatalogPath);
   const relativeProductPath = toPosixRelative(paths.root, productCatalogPath);
   const { products, bundles } = productCatalogMarkdown
     ? parseProductCatalog(productCatalogMarkdown, relativeProductPath, assets)
     : { products: [] as CatalogEntity[], bundles: [] as CatalogEntity[] };
 
-  const brand = await loadBrandDocument(paths.root, paths.rawBrand);
-  const transcripts = await loadTranscripts(paths.root, paths.rawTranscripts);
+  const brand = await loadBrandDocument(paths.root, paths.exportKnowledge);
+  const transcripts = await loadTranscripts(paths.root, paths.exportTranscripts);
   const assetDocuments = assets.map((asset) => assetToDocument(asset));
   const documents: KnowledgeDocument[] = [
     ...products,
@@ -195,9 +195,9 @@ export function findProduct(base: KnowledgeBase, slugOrTitle: string): CatalogEn
 
 async function loadBrandDocument(
   projectRoot: string,
-  rawBrandPath: string
+  exportKnowledgePath: string
 ): Promise<KnowledgeDocument | null> {
-  const filePath = path.join(rawBrandPath, "marine-health-brand-code.md");
+  const filePath = path.join(exportKnowledgePath, "00-brand-code.md");
   const body = await readOptionalText(filePath);
   if (!body) {
     return null;

@@ -19,7 +19,7 @@ const paths = getKnowledgePaths(root);
 const app = createMcpExpressApp({ host });
 
 app.use(express.json({ limit: "2mb" }));
-app.use("/assets", express.static(paths.rawAssets));
+app.use("/assets", express.static(paths.exportAssets));
 
 app.get(
   "/health",

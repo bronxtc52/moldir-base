@@ -280,7 +280,7 @@ function splitTableRow(line: string): string[] {
 
 function findRelatedAssets(title: string, slug: string, assets: AssetRef[]): AssetRef[] {
   const normalizedTitle = normalizeForAssetMatch(`${title} ${slug}`);
-  const titleTokens = new Set(normalizedTitle.split(" ").filter((token) => token.length >= 4));
+  const titleTokens = new Set(splitAssetTokens(normalizedTitle));
 
   return assets.filter((asset) => {
     const normalizedAsset = normalizeForAssetMatch(`${asset.title} ${asset.filename}`);
@@ -288,10 +288,29 @@ function findRelatedAssets(title: string, slug: string, assets: AssetRef[]): Ass
       return true;
     }
 
-    return normalizedAsset
-      .split(" ")
-      .some((token) => token.length >= 4 && titleTokens.has(token));
+    return splitAssetTokens(normalizedAsset).some((token) => titleTokens.has(token));
   });
+}
+
+function splitAssetTokens(value: string): string[] {
+  const stopWords = new Set([
+    "marine",
+    "mockup",
+    "mockups",
+    "mokapy",
+    "product",
+    "products",
+    "plus",
+    "png",
+    "webp",
+    "jpeg",
+    "jpg"
+  ]);
+
+  return value
+    .split(" ")
+    .map((token) => token.trim())
+    .filter((token) => token.length >= 4 && !stopWords.has(token));
 }
 
 function normalizeForAssetMatch(value: string): string {
