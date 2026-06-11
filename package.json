@@ -1,0 +1,43 @@
+{
+  "name": "moldir-base",
+  "version": "0.1.0",
+  "description": "Knowledge base for Marine Health products, brand style, mockups, and future content automation.",
+  "type": "module",
+  "private": true,
+  "main": "dist/http.js",
+  "bin": {
+    "moldir-base-mcp": "dist/mcp-stdio.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/http.ts",
+    "index": "tsx scripts/build-index.ts",
+    "mcp": "tsx src/mcp-stdio.ts",
+    "start": "node dist/http.js",
+    "start:mcp": "node dist/mcp-stdio.js",
+    "validate": "npm run build && npm run index"
+  },
+  "keywords": [
+    "knowledge-base",
+    "mcp",
+    "marine-health",
+    "content-pipeline"
+  ],
+  "author": "Moldir project",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "express": "^5.2.1",
+    "gray-matter": "^4.0.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.9.3",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
