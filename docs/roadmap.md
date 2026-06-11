@@ -12,11 +12,21 @@ Status: done.
 
 ## Phase 2: Article and Social Content Generation
 
+Status: foundation implemented; automation not started.
+
+Foundation:
+
 - Add content job files under `content/`.
-- Generate outlines, drafts, captions, carousels, and short-form scripts.
 - Add review states: `draft`, `needs-review`, `approved`, `published`.
 - Store every output with source products, prompt version, model, date, and reviewer.
+- Add reusable templates for content jobs, generated articles, and generated social posts.
+- Keep generated drafts out of `export/knowledge`.
+
+Automation:
+
+- Generate outlines, drafts, captions, carousels, and short-form scripts.
 - Add platform-specific templates for Instagram, Telegram, YouTube Shorts, TikTok, and website articles.
+- Add MCP/HTTP tools for content job management when generation is ready.
 
 ## Phase 3: Video Generation
 
