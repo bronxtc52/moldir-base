@@ -860,8 +860,6 @@ ASHITABA REPAIR BALM — восстанавливающий мультифунк
 
 **Полный состав (INCI):** Aqua (Water), Cera Alba, Olea Europaea (Olive) Fruit Oil, Juglans Nigra Extract, Helianthus Annuus (Sunflower) Seed Oil, Ashitaba (Angelica Keiskei Extract), Prostomak Phytocomplex (Helianthus Annuus Seed Oil, Thymus Vulgaris Oil, Maclura Pomifera Fruit Extract, Juniperus Communis Fruit Oil). Без парабенов. Без синтетических ароматизаторов.
 
----
-
 ## 📋 СЕРТИФИКАЦИЯ И КАЧЕСТВО
 
 Продукция Marine Health прошла строгий контроль международного качества:
