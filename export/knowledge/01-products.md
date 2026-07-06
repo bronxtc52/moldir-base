@@ -860,6 +860,15 @@ ASHITABA REPAIR BALM — восстанавливающий мультифунк
 
 **Полный состав (INCI):** Aqua (Water), Cera Alba, Olea Europaea (Olive) Fruit Oil, Juglans Nigra Extract, Helianthus Annuus (Sunflower) Seed Oil, Ashitaba (Angelica Keiskei Extract), Prostomak Phytocomplex (Helianthus Annuus Seed Oil, Thymus Vulgaris Oil, Maclura Pomifera Fruit Extract, Juniperus Communis Fruit Oil). Без парабенов. Без синтетических ароматизаторов.
 
+
+**Цены — Ashitaba Repair Balm (15 PV):**
+
+| Страна | Валюта | Партнёрская цена | Клиентская цена | BV |
+|--------|--------|------------------:|----------------:|---:|
+| Казахстан | KZT | 7 800 | 7 800 | 3 360 |
+
+---
+
 ## 📋 СЕРТИФИКАЦИЯ И КАЧЕСТВО
 
 Продукция Marine Health прошла строгий контроль международного качества:
